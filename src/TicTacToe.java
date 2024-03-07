@@ -191,7 +191,7 @@ public class TicTacToe implements ActionListener {
                         (buttons[1].getText()=="O")
 
         ){
-            xWins(0,1,2);
+            oWins(0,1,2);
 
         }
         //check O wins conditions
@@ -202,7 +202,7 @@ public class TicTacToe implements ActionListener {
                         (buttons[5].getText()=="O")
 
         ){
-            xWins(3,4,5);
+            oWins(3,4,5);
 
         }
 
@@ -214,7 +214,7 @@ public class TicTacToe implements ActionListener {
                         (buttons[8].getText()=="O")
 
         ){
-            xWins(6,7,8);
+            oWins(6,7,8);
 
         }
 
@@ -226,7 +226,7 @@ public class TicTacToe implements ActionListener {
                         (buttons[6].getText()=="O")
 
         ){
-            xWins(0,3,6);
+            oWins(0,3,6);
 
         }
 
@@ -236,7 +236,7 @@ public class TicTacToe implements ActionListener {
                         (buttons[7].getText()=="O")
 
         ){
-            xWins(1,4,7);
+            oWins(1,4,7);
 
         }
 
@@ -246,7 +246,7 @@ public class TicTacToe implements ActionListener {
                         (buttons[8].getText()=="O")
 
         ){
-            xWins(2,5,8);
+            oWins(2,5,8);
 
         }
 
@@ -256,7 +256,7 @@ public class TicTacToe implements ActionListener {
                         (buttons[8].getText()=="O")
 
         ){
-            xWins(0,4,8);
+            oWins(0,4,8);
 
         }
 
@@ -266,17 +266,35 @@ public class TicTacToe implements ActionListener {
                         (buttons[6].getText()=="O")
 
         ){
-            xWins(2,4,6);
+            oWins(2,4,6);
 
         }
 
     }
 
     public void xWins(int a, int b, int c) {
+        buttons[a].setBackground(Color.GREEN);
+        buttons[b].setBackground(Color.GREEN);
+        buttons[c].setBackground(Color.GREEN);
+
+        for(int i=0; i<9;i++){
+            buttons[i].setEnabled(false);
+        }
+        textfield.setText("X wins");
+
 
     }
 
     public void oWins(int a, int b, int c) {
+
+        buttons[a].setBackground(Color.GREEN);
+        buttons[b].setBackground(Color.GREEN);
+        buttons[c].setBackground(Color.GREEN);
+
+        for(int i=0; i<9;i++){
+            buttons[i].setEnabled(false);
+        }
+        textfield.setText("O wins");
 
     }
 
